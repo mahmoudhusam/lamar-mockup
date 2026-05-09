@@ -129,9 +129,49 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
 .flinks a:hover{color:var(--white)}
 .fcopy{font-size:0.68rem;color:rgba(242,238,230,0.2);font-family:'Archivo',sans-serif}
 
+/* ── SERVICES ─────────────────────────────────── */
+#services{padding:8rem 3.5rem;background:var(--bg2)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;margin-top:3.5rem}
+.svc-card{background:var(--bg3);border:1px solid var(--border);border-radius:3px;padding:2.25rem 1.75rem;display:flex;flex-direction:column;gap:1.25rem;transition:border-color 0.3s,transform 0.3s}
+.svc-card:hover{border-color:var(--teal2);transform:translateY(-4px)}
+.svc-icon{width:44px;height:44px;background:rgba(42,191,168,0.1);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.svc-icon svg{display:block}
+.svc-name{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.05rem;color:var(--white);letter-spacing:-0.01em}
+.svc-desc{font-size:0.875rem;line-height:1.72;color:var(--white2);font-weight:300}
+.svc-link{font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal2);display:inline-flex;align-items:center;gap:0.4rem;margin-top:auto;font-family:'Archivo',sans-serif;font-weight:500}
+
+/* ── HOW WE WORK ──────────────────────────────── */
+#process{padding:8rem 3.5rem;background:var(--bg)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;position:relative}
+.process-grid::before{content:'';position:absolute;top:28px;left:calc(12.5% + 1rem);right:calc(12.5% + 1rem);height:1px;background:linear-gradient(to right,var(--teal) 0%,var(--teal2) 100%);z-index:0}
+.pstep{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 1.5rem;position:relative;z-index:1}
+.pnum{width:56px;height:56px;border-radius:50%;background:var(--bg2);border:1px solid var(--teal);display:flex;align-items:center;justify-content:center;margin-bottom:1.75rem;flex-shrink:0;transition:background 0.3s,border-color 0.3s}
+.pstep:hover .pnum{background:var(--teal);border-color:var(--teal)}
+.pnum-inner{font-family:'Archivo',sans-serif;font-weight:800;font-size:0.85rem;color:var(--teal2);letter-spacing:0.08em;transition:color 0.3s}
+.pstep:hover .pnum-inner{color:var(--white)}
+.pstep-title{font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:0.75rem;letter-spacing:-0.01em}
+.pstep-desc{font-size:0.85rem;line-height:1.72;color:var(--white2);font-weight:300}
+
+/* ── TESTIMONIALS ─────────────────────────────── */
+#testimonials{padding:8rem 3.5rem;background:var(--bg2)}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:3.5rem}
+.tcard{background:var(--bg3);border:1px solid var(--border);border-radius:3px;padding:2.25rem 2rem;display:flex;flex-direction:column;gap:1.5rem;transition:border-color 0.3s}
+.tcard:hover{border-color:var(--border2)}
+.tcard.featured{border-color:var(--teal);background:var(--bg)}
+.tstars{display:flex;gap:3px}
+.tstar{color:var(--teal2);font-size:0.85rem}
+.tquote{font-size:0.95rem;line-height:1.78;color:var(--white2);font-weight:300;font-style:italic;flex:1}
+.tquote::before{content:'\201C';font-family:'Archivo',sans-serif;font-size:2rem;color:var(--teal2);line-height:0;vertical-align:-0.5rem;margin-right:2px}
+.tauthor{display:flex;align-items:center;gap:0.875rem;padding-top:1.25rem;border-top:1px solid var(--border)}
+.tavatar{width:38px;height:38px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:700;font-size:0.8rem;color:var(--white);flex-shrink:0}
+.tname{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.875rem;color:var(--white)}
+.tloc{font-size:0.72rem;letter-spacing:0.08em;color:var(--white2);margin-top:1px}
+
+/* ── REVEAL ───────────────────────────────────── */
 .rv{opacity:0;transform:translateY(28px);transition:opacity 0.75s ease,transform 0.75s ease}
 .rv.on{opacity:1;transform:translateY(0)}
 .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.25s}.rv.d3{transition-delay:.38s}
+.rv.d4{transition-delay:.48s}
 .rvl{opacity:0;transform:translateX(-28px);transition:opacity 0.75s ease,transform 0.75s ease}
 .rvl.on{opacity:1;transform:translateX(0)}
 
@@ -143,11 +183,15 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
   .hero-title{font-size:clamp(2.5rem,9vw,4.5rem)}
   #about{grid-template-columns:1fr;padding:5rem 1.5rem;gap:4rem}
   #contact{grid-template-columns:1fr;padding:5rem 1.5rem;gap:3rem}
-  #our-work{padding:5rem 1.5rem}
+  #our-work,#services,#process,#testimonials{padding:5rem 1.5rem}
   .avisual{padding:0 0 2rem}
   .afloat{right:0}.abadge{left:0}
   .bento{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .bc:nth-child(n){grid-column:auto!important;grid-row:auto!important;height:200px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .process-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .process-grid::before{display:none}
+  .tgrid{grid-template-columns:1fr}
   footer{flex-direction:column;gap:1rem;padding:1.5rem;text-align:center}
   .flinks{justify-content:center}
 }
@@ -165,6 +209,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
   </a>
   <div class="nav-r">
     <a href="#about">About</a>
+    <a href="#services">Services</a>
     <a href="#our-work">Our Work</a>
     <a href="#contact" class="nav-btn">Contact Us</a>
   </div>
@@ -209,6 +254,48 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
   </div>
 </div>
 
+<!-- SERVICES -->
+<section id="services">
+  <div class="rv">
+    <div class="slabel">What We Do</div>
+    <h2 class="stitle">Our <span class="hl">Services</span></h2>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card rv d1">
+      <div class="svc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ABFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="svc-name">Gypsum Work</div>
+      <div class="svc-desc">Precision gypsum plastering for walls and ceilings — smooth finishes, decorative mouldings, and ornate ceiling details crafted to perfection.</div>
+      <span class="svc-link">Learn More →</span>
+    </div>
+    <div class="svc-card rv d2">
+      <div class="svc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ABFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="svc-name">Interior Decoration</div>
+      <div class="svc-desc">Bespoke interior styling that transforms spaces — from material selection and colour consulting to the final decorative details that make a home feel complete.</div>
+      <span class="svc-link">Learn More →</span>
+    </div>
+    <div class="svc-card rv d3">
+      <div class="svc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ABFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div class="svc-name">Painting</div>
+      <div class="svc-desc">Professional wall and ceiling painting with premium materials — clean preparation, flawless application, and long-lasting results for every surface type.</div>
+      <span class="svc-link">Learn More →</span>
+    </div>
+    <div class="svc-card rv d4">
+      <div class="svc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ABFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="svc-name">House Restoration</div>
+      <div class="svc-desc">Full residential restoration from structural repairs to cosmetic finishing — breathing new life into older properties while preserving their character.</div>
+      <span class="svc-link">Learn More →</span>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <div>
     <div class="slabel rv">About LAMAR</div>
@@ -228,6 +315,36 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
     <div class="aimg" id="aboutImg"></div>
     <div class="abadge"><span class="abn">12+</span><span class="abl">Years of<br>Experience</span></div>
     <div class="afloat"><span class="afn">200+</span><span class="afl">Projects<br>Completed</span></div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="process">
+  <div class="rv">
+    <div class="slabel">Our Approach</div>
+    <h2 class="stitle">How We <span class="hl">Work</span></h2>
+  </div>
+  <div class="process-grid">
+    <div class="pstep rv d1">
+      <div class="pnum"><span class="pnum-inner">01</span></div>
+      <div class="pstep-title">Free Consultation</div>
+      <div class="pstep-desc">We visit your space, listen to your vision, and assess exactly what needs to be done — no obligation, no pressure.</div>
+    </div>
+    <div class="pstep rv d2">
+      <div class="pnum"><span class="pnum-inner">02</span></div>
+      <div class="pstep-title">Clear Quote</div>
+      <div class="pstep-desc">You receive a detailed, transparent quote within 48 hours. No hidden costs, no surprises — just an honest breakdown of the work.</div>
+    </div>
+    <div class="pstep rv d3">
+      <div class="pnum"><span class="pnum-inner">03</span></div>
+      <div class="pstep-title">We Get to Work</div>
+      <div class="pstep-desc">Our team arrives on schedule, works cleanly and efficiently, and keeps you informed throughout every stage of the project.</div>
+    </div>
+    <div class="pstep rv d4">
+      <div class="pnum"><span class="pnum-inner">04</span></div>
+      <div class="pstep-title">Final Handover</div>
+      <div class="pstep-desc">We do a walkthrough together, make sure everything meets your expectations, and only leave when you're fully satisfied.</div>
+    </div>
   </div>
 </section>
 
@@ -254,6 +371,40 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
     <div class="bc">
       <div class="bc-cl">Ready to start your project?</div>
       <div class="bc-arr">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="rv">
+    <div class="slabel">Client Reviews</div>
+    <h2 class="stitle">What Our <span class="hl">Clients Say</span></h2>
+  </div>
+  <div class="tgrid">
+    <div class="tcard rv d1">
+      <div class="tstars"><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span></div>
+      <div class="tquote">The gypsum ceiling work they did in our living room is absolutely stunning. Clean, precise, and finished ahead of schedule. We couldn't be happier with the result.</div>
+      <div class="tauthor">
+        <div class="tavatar">JV</div>
+        <div><div class="tname">Jan de Vries</div><div class="tloc">Amsterdam, NL</div></div>
+      </div>
+    </div>
+    <div class="tcard featured rv d2">
+      <div class="tstars"><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span></div>
+      <div class="tquote">LAMAR transformed our entire ground floor. Professional team, excellent communication throughout, and the decoration work exceeded everything we imagined. Highly recommended.</div>
+      <div class="tauthor">
+        <div class="tavatar">SB</div>
+        <div><div class="tname">Sophie Bakker</div><div class="tloc">Rotterdam, NL</div></div>
+      </div>
+    </div>
+    <div class="tcard rv d3">
+      <div class="tstars"><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span><span class="tstar">★</span></div>
+      <div class="tquote">They restored our 1960s home beautifully — walls, ceilings, painting, everything. The attention to detail was remarkable. Will definitely use LAMAR again for our next project.</div>
+      <div class="tauthor">
+        <div class="tavatar">MT</div>
+        <div><div class="tname">Mark Timmers</div><div class="tloc">Utrecht, NL</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -293,6 +444,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
   </a>
   <ul class="flinks">
     <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#our-work">Our Work</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
