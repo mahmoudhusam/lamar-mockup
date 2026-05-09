@@ -300,28 +300,27 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
 </footer>
 
 <script>
-// Each entry: [unsplash url, teal gradient fallback]
-// source.unsplash.com/{id} works reliably on HTTPS deployments (Vercel)
-const U = 'https://source.unsplash.com';
+// Pexels CDN — explicitly allows hotlinking, works everywhere
+const P = 'https://images.pexels.com/photos';
 const photos = {
-  // Hero — finished modern living room (wide)
-  heroImg:  [`${U}/bc5D4xrShPQ/1200x900`,  'linear-gradient(155deg,#2A7A6E 0%,#1A5248 45%,#0A2820 100%)'],
-  // About — elegant minimalist interior
-  aboutImg: [`${U}/4r9OKorlcTk/800x1000`,  'linear-gradient(160deg,#3A8A7A 0%,#1A6050 45%,#0A2E22 100%)'],
-  // G1 — bright finished living room (gypsum walls, clean finish)
-  g1:       [`${U}/9M66C_w_ToM/900x520`,   'linear-gradient(145deg,#2A8070 0%,#1A5848 50%,#082820 100%)'],
-  // G2 — kitchen remodel result
-  g2:       [`${U}/Pf-GjKfYGO4/600x520`,   'linear-gradient(160deg,#3A9080 0%,#1A6855 55%,#0A3025 100%)'],
-  // G3 — corridor under renovation / construction in progress
-  g3:       [`${U}/iwNLm_DlWng/800x720`,   'linear-gradient(140deg,#226860 0%,#144840 50%,#082420 100%)'],
-  // G5 — ornate plaster ceiling detail
-  g5:       [`${U}/t9gHbo--k8I/600x400`,   'linear-gradient(150deg,#2A7868 0%,#185848 50%,#083028 100%)'],
-  // G6 — worker painting wall (shows the actual service)
-  g6:       [`${U}/57ldq9age5U/500x400`,   'linear-gradient(135deg,#225858 0%,#124040 50%,#082828 100%)'],
-  // G7 — elegant modern bathroom renovation result
-  g7:       [`${U}/HIu7A27ptE0/800x520`,   'linear-gradient(155deg,#2A8878 0%,#186858 50%,#083430 100%)'],
-  // G8 — living room with white walls and wooden floors (restoration result)
-  g8:       [`${U}/DBw-LI8ueXw/800x520`,   'linear-gradient(145deg,#1A7068 0%,#105050 50%,#062C2C 100%)'],
+  // Hero — elegant living room, neutral tones, quality finish
+  heroImg:  [`${P}/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop`,  'linear-gradient(155deg,#2A7A6E 0%,#1A5248 45%,#0A2820 100%)'],
+  // About — ornate plaster ceiling, chandelier, elegant interior
+  aboutImg: [`${P}/13067890/pexels-photo-13067890.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop`, 'linear-gradient(160deg,#3A8A7A 0%,#1A6050 45%,#0A2E22 100%)'],
+  // G1 — modern artistic living room, large windows
+  g1:       [`${P}/2736139/pexels-photo-2736139.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop`,   'linear-gradient(145deg,#2A8070 0%,#1A5848 50%,#082820 100%)'],
+  // G2 — open plan living room + kitchen (renovation result)
+  g2:       [`${P}/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600&h=520&fit=crop`,   'linear-gradient(160deg,#3A9080 0%,#1A6855 55%,#0A3025 100%)'],
+  // G3 — house actively under renovation (tall cell)
+  g3:       [`${P}/5691530/pexels-photo-5691530.jpeg?auto=compress&cs=tinysrgb&w=800&h=720&fit=crop`,   'linear-gradient(140deg,#226860 0%,#144840 50%,#082420 100%)'],
+  // G5 — living room with plaster wall texture
+  g5:       [`${P}/16764180/pexels-photo-16764180.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop`, 'linear-gradient(150deg,#2A7868 0%,#185848 50%,#083028 100%)'],
+  // G6 — workers painting walls with roller (shows the actual service)
+  g6:       [`${P}/5493654/pexels-photo-5493654.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop`,   'linear-gradient(135deg,#225858 0%,#124040 50%,#082828 100%)'],
+  // G7 — modern bathroom renovation result (marble, wooden accents)
+  g7:       [`${P}/7045358/pexels-photo-7045358.jpeg?auto=compress&cs=tinysrgb&w=800&h=520&fit=crop`,   'linear-gradient(155deg,#2A8878 0%,#186858 50%,#083430 100%)'],
+  // G8 — house renovation in progress (walls, construction)
+  g8:       [`${P}/3990359/pexels-photo-3990359.jpeg?auto=compress&cs=tinysrgb&w=800&h=520&fit=crop`,   'linear-gradient(145deg,#1A7068 0%,#105050 50%,#062C2C 100%)'],
 };
 
 Object.entries(photos).forEach(([id, [url, fallback]]) => {
