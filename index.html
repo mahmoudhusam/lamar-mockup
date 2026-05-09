@@ -300,17 +300,28 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
 </footer>
 
 <script>
-// Each entry: [picsum url, teal gradient fallback]
+// Each entry: [unsplash url, teal gradient fallback]
+// source.unsplash.com/{id} works reliably on HTTPS deployments (Vercel)
+const U = 'https://source.unsplash.com';
 const photos = {
-  heroImg:  ['https://picsum.photos/id/1060/1200/900',  'linear-gradient(155deg,#2A7A6E 0%,#1A5248 45%,#0A2820 100%)'],
-  aboutImg: ['https://picsum.photos/id/1040/800/1000',  'linear-gradient(160deg,#3A8A7A 0%,#1A6050 45%,#0A2E22 100%)'],
-  g1:       ['https://picsum.photos/id/1076/900/520',   'linear-gradient(145deg,#2A8070 0%,#1A5848 50%,#082820 100%)'],
-  g2:       ['https://picsum.photos/id/1080/600/520',   'linear-gradient(160deg,#3A9080 0%,#1A6855 55%,#0A3025 100%)'],
-  g3:       ['https://picsum.photos/id/1039/800/720',   'linear-gradient(140deg,#226860 0%,#144840 50%,#082420 100%)'],
-  g5:       ['https://picsum.photos/id/1082/600/400',   'linear-gradient(150deg,#2A7868 0%,#185848 50%,#083028 100%)'],
-  g6:       ['https://picsum.photos/id/1068/500/400',   'linear-gradient(135deg,#225858 0%,#124040 50%,#082828 100%)'],
-  g7:       ['https://picsum.photos/id/1071/800/520',   'linear-gradient(155deg,#2A8878 0%,#186858 50%,#083430 100%)'],
-  g8:       ['https://picsum.photos/id/1063/800/520',   'linear-gradient(145deg,#1A7068 0%,#105050 50%,#062C2C 100%)'],
+  // Hero — finished modern living room (wide)
+  heroImg:  [`${U}/bc5D4xrShPQ/1200x900`,  'linear-gradient(155deg,#2A7A6E 0%,#1A5248 45%,#0A2820 100%)'],
+  // About — elegant minimalist interior
+  aboutImg: [`${U}/4r9OKorlcTk/800x1000`,  'linear-gradient(160deg,#3A8A7A 0%,#1A6050 45%,#0A2E22 100%)'],
+  // G1 — bright finished living room (gypsum walls, clean finish)
+  g1:       [`${U}/9M66C_w_ToM/900x520`,   'linear-gradient(145deg,#2A8070 0%,#1A5848 50%,#082820 100%)'],
+  // G2 — kitchen remodel result
+  g2:       [`${U}/Pf-GjKfYGO4/600x520`,   'linear-gradient(160deg,#3A9080 0%,#1A6855 55%,#0A3025 100%)'],
+  // G3 — corridor under renovation / construction in progress
+  g3:       [`${U}/iwNLm_DlWng/800x720`,   'linear-gradient(140deg,#226860 0%,#144840 50%,#082420 100%)'],
+  // G5 — ornate plaster ceiling detail
+  g5:       [`${U}/t9gHbo--k8I/600x400`,   'linear-gradient(150deg,#2A7868 0%,#185848 50%,#083028 100%)'],
+  // G6 — worker painting wall (shows the actual service)
+  g6:       [`${U}/57ldq9age5U/500x400`,   'linear-gradient(135deg,#225858 0%,#124040 50%,#082828 100%)'],
+  // G7 — elegant modern bathroom renovation result
+  g7:       [`${U}/HIu7A27ptE0/800x520`,   'linear-gradient(155deg,#2A8878 0%,#186858 50%,#083430 100%)'],
+  // G8 — living room with white walls and wooden floors (restoration result)
+  g8:       [`${U}/DBw-LI8ueXw/800x520`,   'linear-gradient(145deg,#1A7068 0%,#105050 50%,#062C2C 100%)'],
 };
 
 Object.entries(photos).forEach(([id, [url, fallback]]) => {
