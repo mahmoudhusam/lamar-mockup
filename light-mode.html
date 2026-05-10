@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LAMAR - Architectural Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Archivo:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f7faf8",
+                        "inverse-on-surface": "#eff1ef",
+                        "secondary": "#006b5d",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#70f5dc",
+                        "outline-variant": "#bec9c5",
+                        "on-surface": "#181c1b",
+                        "on-background": "#181c1b",
+                        "on-secondary-fixed": "#00201b",
+                        "inverse-primary": "#8ad4c6",
+                        "outline": "#6f7976",
+                        "on-tertiary-fixed": "#380d01",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "inverse-surface": "#2d3130",
+                        "on-primary-fixed-variant": "#005047",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#005045",
+                        "surface-container-high": "#e6e9e7",
+                        "surface-container-low": "#f1f4f2",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#186a5f",
+                        "on-primary-fixed": "#00201c",
+                        "secondary-fixed": "#73f8df",
+                        "primary-container": "#1a6b60",
+                        "secondary-fixed-dim": "#52dbc3",
+                        "primary": "#005248",
+                        "surface-variant": "#e0e3e1",
+                        "surface-dim": "#d8dbd9",
+                        "on-secondary-container": "#006f61",
+                        "surface-container-highest": "#e0e3e1",
+                        "on-surface-variant": "#3f4946",
+                        "on-tertiary-container": "#ffd1c3",
+                        "primary-fixed-dim": "#8ad4c6",
+                        "on-primary-container": "#9ee9da",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f7faf8",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#713826",
+                        "on-tertiary-fixed-variant": "#6f3724",
+                        "tertiary-container": "#8e4f3b",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceeec",
+                        "surface": "#f7faf8",
+                        "primary-fixed": "#a6f1e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Outfit"],
+                        "display-lg-mobile": ["Archivo"],
+                        "display-lg": ["Archivo"],
+                        "body-md": ["Outfit"],
+                        "headline-md": ["Archivo"],
+                        "label-sm": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface-bright text-primary font-body-md text-body-md fixed top-0 w-full z-50 border-b border-outline-variant/50 shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold tracking-[0.2em] text-on-surface hover:scale-[1.02] transition-transform duration-300" href="#">LAMAR</a>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#portfolio">Portfolio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#process">Process</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#reviews">Reviews</a>
+</nav>
+<a class="hidden md:inline-flex bg-primary-container text-on-primary px-6 py-3 rounded-DEFAULT font-label-sm text-label-sm hover:opacity-90 transition-opacity scale-100 hover:scale-[1.02] duration-300" href="#contact">Contact Us</a>
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-[96px]"> <!-- Offset for fixed nav -->
+<!-- 1. Hero Section -->
+<section class="relative min-h-[819px] flex items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24">
+<div class="grid md:grid-cols-12 gap-gutter items-center w-full">
+<div class="md:col-span-7 z-10 space-y-8">
+<span class="inline-block border border-outline px-4 py-2 rounded-full font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase bg-surface">Architectural Renovation</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface max-w-[800px] leading-tight">We Build Spaces That Last</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[600px]">Premium interior decoration and structural restoration tailored for clarity, professional sophistication, and enduring quality.</p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary-container text-on-primary px-8 py-4 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-colors inline-flex items-center gap-2" href="#portfolio">
+                            View Portfolio
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="border border-outline text-on-surface px-8 py-4 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors" href="#services">Our Services</a>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-3 gap-8 pt-12 border-t border-outline-variant mt-12 w-fit">
+<div>
+<p class="font-headline-md text-headline-md text-primary">200+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Projects</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-primary">12+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Years</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-primary">100%</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Satisfaction</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 relative h-[500px] w-full mt-12 md:mt-0">
+<img alt="Modern architecture interior" class="w-full h-full object-cover rounded-DEFAULT shadow-[0_20px_40px_rgba(12,12,10,0.05)] border border-outline-variant/30" data-alt="A bright, minimalist modern architectural interior showcasing high-end renovation. The space features clean lines, ample natural light flooding through large windows, and premium materials in white, light gray, and subtle warm wood tones. The setting embodies a modern corporate or high-end gallery aesthetic, prioritizing structural integrity and rhythmic spacing over decorative clutter. The lighting is soft and ambient, creating an airy, light-filled mood consistent with a sophisticated light-mode UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEjVhJpsKo6ygjsZZ3eLi-R0k6y6wTuy0sHVdAwZuwPMylJBgpIVoFrTF-r-hiX-Bc2flSNiIBGpBNem9Zz39YO7Z87enr48m25NJbLeDhMKJr7G59ifk0gIuMowsduh-4lrhk3RPG_aPy5ihaToj8t_spMRhiyRNtiR2teOZhrAZZGUdI1tBXEou5DUwxLT58ESQqZVcfjHZcFy284KIhy-wIqweQJwDowufMYS9SEAoo9kPdxjefAUbH051nouf3WDqbLWY4z_ov"/>
+<!-- Decorative architectural lines -->
+<div class="absolute -top-4 -right-4 w-full h-full border border-primary/20 rounded-DEFAULT -z-10"></div>
+</div>
+</div>
+</section>
+<!-- 2. Services Section -->
+<section class="bg-surface-container-lowest py-24 border-t border-outline-variant/50" id="services">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16 max-w-[600px]">
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-headline-md md:text-headline-md text-on-surface mb-4">Our Expertise</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Comprehensive solutions combining structural integrity with refined aesthetic sensibilities.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface-bright p-8 rounded-DEFAULT border border-outline-variant/50 hover:border-secondary hover:shadow-[0_20px_40px_rgba(12,12,10,0.03)] transition-all duration-300 group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-6 block group-hover:scale-110 transition-transform">architecture</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 text-[20px]">Gypsum Work</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision drywall and ceiling installations, creating clean architectural lines and perfect finishes.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-bright p-8 rounded-DEFAULT border border-outline-variant/50 hover:border-secondary hover:shadow-[0_20px_40px_rgba(12,12,10,0.03)] transition-all duration-300 group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-6 block group-hover:scale-110 transition-transform">chair</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 text-[20px]">Interior Decoration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Curated space planning and aesthetic refinement for modern, sophisticated environments.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-bright p-8 rounded-DEFAULT border border-outline-variant/50 hover:border-secondary hover:shadow-[0_20px_40px_rgba(12,12,10,0.03)] transition-all duration-300 group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-6 block group-hover:scale-110 transition-transform">format_paint</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 text-[20px]">Painting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Expert color application and surface finishing using premium materials for lasting results.</p>
+</div>
+<!-- Service 4 -->
+<div class="bg-surface-bright p-8 rounded-DEFAULT border border-outline-variant/50 hover:border-secondary hover:shadow-[0_20px_40px_rgba(12,12,10,0.03)] transition-all duration-300 group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-6 block group-hover:scale-110 transition-transform">home_repair_service</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 text-[20px]">House Restoration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive structural and cosmetic updates breathing new life into established properties.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. About Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="about">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<img alt="Architectural details" class="w-full aspect-[4/5] object-cover rounded-DEFAULT" data-alt="Close up architectural detail of a modern building interior during a premium renovation process. The image focuses on pristine white gypsum wall textures, sharp architectural corners, and a sophisticated minimalist structural design. The lighting is bright and diffuse, casting very soft, low-contrast shadows that emphasize the quality of the craftsmanship. The overall mood is precise, professional, and aligns perfectly with a clean, light-mode corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-FKmGmhN8CKuW2xfQcEKALYvw-9dr32YtiiIRS58DfZng08JDotnLsh6oF3QcPtjyxEIbc5uhw_GE5vwrvwWkgHFUu-K3QtFTFFJI8PlIMXOnUKJsYy9PIGAgScwlRqphdAFrhgt4reX4BSmkb0RWEuEpbadCtkbS0b1uiPmyQBPhvhmVMy9wv2ei7KnLzkPLu5eRB404ynuxL7ittHA60uKRjvQedflqHPZRnkmeAel5g90Imq8GwUEmkAFeFXnqXHRgA5WR9w1p"/>
+<!-- 12+ Years Badge -->
+<div class="absolute -bottom-8 -right-8 bg-surface-container p-6 rounded-DEFAULT border border-outline-variant/30 shadow-[0_20px_40px_rgba(12,12,10,0.05)] w-48 hidden md:block">
+<p class="font-headline-md text-headline-md text-primary mb-1">12+ Years</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Of Architectural Excellence</p>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface leading-tight">We Don't Just Renovate.<br/>We Transform.</h2>
+<div class="w-16 h-px bg-primary my-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">At LAMAR, we view every project as a canvas. Our approach treats space itself as a material, relying on structural integrity, deliberate lighting, and meticulous craftsmanship to create environments that are both functional and inspiring.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">With over a decade of experience in high-end renovations, our team brings precision to every detail, ensuring your vision is realized with uncompromising quality.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-wider mt-8 hover:text-secondary transition-colors" href="#contact">
+                        Discover Our Story
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 4. Process Section -->
+<section class="bg-surface-container-low py-24 border-y border-outline-variant/50" id="process">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 max-w-[600px] mx-auto">
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-headline-md md:text-headline-md text-on-surface mb-4">The LAMAR Process</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">A streamlined, transparent methodology designed to deliver exceptional results with minimal disruption.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-[40px] left-[12%] right-[12%] h-px bg-outline-variant/50 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-bright rounded-full border border-primary/20 flex items-center justify-center mb-6 shadow-[0_10px_20px_rgba(12,12,10,0.03)] text-primary">
+<span class="material-symbols-outlined text-[32px]">forum</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">1. Consultation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Understanding your vision, spatial requirements, and functional needs.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-bright rounded-full border border-primary/20 flex items-center justify-center mb-6 shadow-[0_10px_20px_rgba(12,12,10,0.03)] text-primary">
+<span class="material-symbols-outlined text-[32px]">request_quote</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">2. Quote</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Transparent, detailed proposal outlining scope, materials, and timeline.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-bright rounded-full border border-primary/20 flex items-center justify-center mb-6 shadow-[0_10px_20px_rgba(12,12,10,0.03)] text-primary">
+<span class="material-symbols-outlined text-[32px]">construction</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">3. Work</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Meticulous execution by our expert craftsmen, adhering strictly to plans.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-bright rounded-full border border-primary/20 flex items-center justify-center mb-6 shadow-[0_10px_20px_rgba(12,12,10,0.03)] text-primary">
+<span class="material-symbols-outlined text-[32px]">key</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-[18px] text-on-surface mb-2">4. Handover</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Final walkthrough and delivery of your transformed space.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Portfolio Section (Bento Grid) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="portfolio">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-2">Our Work</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A selection of recent architectural transformations.</p>
+</div>
+<a class="hidden md:inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-wider hover:text-secondary transition-colors" href="#">
+                    View Full Portfolio
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 h-[800px] md:h-[600px]">
+<!-- Large Item -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-DEFAULT border border-outline-variant/30">
+<img alt="Modern living room renovation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A spacious, high-end modern living room post-renovation. The space features floor-to-ceiling windows, pristine white walls, and elegant, minimalist furniture in neutral tones. Structural elements like a sleek built-in fireplace and subtle ceiling lighting are prominent. The room is bathed in natural, soft daylight, creating a bright, sophisticated light-mode aesthetic that emphasizes clean lines, rhythmic spacing, and architectural integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzRAa-xPoG_9MmkLlXoi9O9ZjXKo2dSe9MweOkH1VZyyZVNflLrEDuOTPSr6sY3HvPO0bPIRMs4WM4Js3-ySqF3z8OG6aWE0JsNPa9JfFBAiWPtWmAJel4rLVp6-xErzKr3ZO6xRAImqs9syzh3h8lacVdBORC0k1WR4IX-WzkLwVVm_puGb2raXWi7eBE-MASXsOItUQ3fkMd2LS7_4SNUDN5r__lz_Rb2zTO0Jfnx1M8ox1cENQJrUbMKz2bFkhoVCKZ-0_6GCKM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent flex flex-col justify-end p-8">
+<span class="bg-surface/90 text-on-surface px-3 py-1 rounded-sm w-fit font-label-sm text-label-sm mb-3">Complete Restoration</span>
+<h3 class="font-headline-md text-headline-md text-white">The Glasshouse Project</h3>
+</div>
+</div>
+<!-- Small Item Top -->
+<div class="relative group overflow-hidden rounded-DEFAULT border border-outline-variant/30">
+<img alt="Minimalist kitchen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pristine, minimalist kitchen design featuring seamless white cabinetry, a striking light-toned marble island, and subtle teal accents. The geometry is strict and organized, reflecting modern corporate structural design. The lighting is even and bright, eliminating harsh shadows and contributing to a clean, high-end, light-filled atmosphere typical of premium architectural firms." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNKNcBnfFnUPJXZUZ9TKAFAuZ-YK60aPXN-RXjys3J80voLAQvuQ2db6yr7dWaQ3gO-sCVMP6gz6svlT_XdT1kahoDEqtwkuzbEYgEVoMxlNvsgM0LgYEwv3TcWnuN8QXelRhF5fbjOmo7Lzkz-jl43X3GgFzMg7dP9uq1nCaBrFPG_NwLi_s3_-Yevqz3qo8qbrCShZTTjIADtOsjEXsV5KmTbeO8fJ7W7huhXpXNh4RSkZL1A7ElSD5qwR3hoDZ_Ws_g_LmSUF0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+<span class="bg-surface/90 text-on-surface px-3 py-1 rounded-sm w-fit font-label-sm text-label-sm mb-2 text-[10px]">Interior Decoration</span>
+<h3 class="font-headline-md text-headline-md text-[18px] text-white">Minimalist Kitchen</h3>
+</div>
+</div>
+<!-- Small Item Bottom -->
+<div class="relative group overflow-hidden rounded-DEFAULT border border-outline-variant/30">
+<img alt="Gypsum ceiling detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detailed shot of custom gypsum ceiling work in a modern architectural space. The image highlights complex, clean geometric indentations and integrated, soft LED strip lighting that casts a subtle, warm glow against stark white surfaces. The composition emphasizes white space as a structural material, capturing a highly refined, professional aesthetic suitable for a premium design portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD943PLNJcNQLA9MSeimkomEYw5X5cuIorGzwGgO4k-pS75uCb_070hKWRLMswmZhELM1WsVZSpSz3Gx2AzuNL1y08teogWOxjwA8Yx5S25NFATakJLsYwXac-8f0Hir6vPBpW42xikeiEJyDUhIN_Gx_NPO84zhkDwgSNbGzblSgfiT_GT5Y_FdDwM8Dy4ugC-VkCm9ZPlWY3ZZKKV7pZfiDgT-27a4JUq5-qZKdJ5CTBJI8sXiFA3OPa9fEuwXMN3LnQTV1yEm1vY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+<span class="bg-surface/90 text-on-surface px-3 py-1 rounded-sm w-fit font-label-sm text-label-sm mb-2 text-[10px]">Gypsum Work</span>
+<h3 class="font-headline-md text-headline-md text-[18px] text-white">Bespoke Ceilings</h3>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center md:hidden">
+<a class="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-wider" href="#">
+                    View Full Portfolio
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 6. Testimonials Section -->
+<section class="bg-surface-container-lowest py-24 border-t border-outline-variant/50" id="reviews">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-headline-md md:text-headline-md text-on-surface text-center mb-16">Client Perspectives</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="bg-surface-bright p-8 border border-outline-variant/30 rounded-DEFAULT relative mt-6 hover:border-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-[48px] text-outline-variant/20 absolute -top-4 -left-2 rotate-180">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"LAMAR didn't just renovate our office; they completely redefined how we use the space. Their attention to detail in the gypsum work was exceptional."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center font-headline-md text-on-surface text-[16px]">JD</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface">James Davies</p>
+<p class="font-label-sm text-[10px] text-on-surface-variant">Corporate Client</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-bright p-8 border border-outline-variant/30 rounded-DEFAULT relative mt-6 hover:border-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-[48px] text-outline-variant/20 absolute -top-4 -left-2 rotate-180">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"The level of professionalism from consultation to handover was remarkable. They delivered our home restoration on time and perfectly on brief."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center font-headline-md text-on-surface text-[16px]">MR</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface">Maria Rossi</p>
+<p class="font-label-sm text-[10px] text-on-surface-variant">Homeowner</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-bright p-8 border border-outline-variant/30 rounded-DEFAULT relative mt-6 hover:border-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-[48px] text-outline-variant/20 absolute -top-4 -left-2 rotate-180">format_quote</span>
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Their interior decoration team understood exactly what we wanted: a clean, modern, and highly functional space. The final result exceeded our expectations."</p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center font-headline-md text-on-surface text-[16px]">AL</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface">Alex Lin</p>
+<p class="font-label-sm text-[10px] text-on-surface-variant">Gallery Director</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Contact Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant/50" id="contact">
+<div class="grid md:grid-cols-2 gap-16">
+<div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-6">Start Your Project</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Contact us to discuss your architectural or decoration needs. Our team is ready to bring structural clarity and refined design to your space.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider mb-1">Studio</p>
+<p class="font-body-md text-body-md text-on-surface-variant">124 Architectural Avenue<br/>Design District, Suite 400</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">mail</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider mb-1">Email</p>
+<p class="font-body-md text-body-md text-on-surface-variant">consult@lamar-renovations.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">phone</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider mb-1">Phone</p>
+<p class="font-body-md text-body-md text-on-surface-variant">+1 (555) 123-4567</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-DEFAULT border border-outline-variant/50 shadow-[0_20px_40px_rgba(12,12,10,0.02)]">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-2" for="first-name">First Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" id="first-name" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-2" for="last-name">Last Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" id="last-name" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-2" for="email">Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" id="email" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-2" for="service">Service Required</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all appearance-none" id="service">
+<option>Gypsum Work</option>
+<option>Interior Decoration</option>
+<option>Painting</option>
+<option>House Restoration</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-2" for="message">Project Details</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all resize-none" id="message" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary px-8 py-4 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-colors mt-4" type="submit">Submit Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-highest text-primary font-body-md text-body-md w-full border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="font-headline-md text-headline-md font-bold tracking-[0.2em] text-on-surface">LAMAR</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant hover:text-secondary transition-colors opacity-100 hover:opacity-80 transition-opacity text-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors opacity-100 hover:opacity-80 transition-opacity text-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors opacity-100 hover:opacity-80 transition-opacity text-sm" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors opacity-100 hover:opacity-80 transition-opacity text-sm" href="#">LinkedIn</a>
+</div>
+<div class="text-on-surface-variant text-sm">
+                © 2024 LAMAR Renovation &amp; Decoration. Architectural Excellence.
+            </div>
+</div>
+</footer>
+</body></html>
