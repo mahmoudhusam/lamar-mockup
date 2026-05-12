@@ -228,10 +228,17 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
 
 <nav id="nav">
   <a href="#hero" class="logo">
-    <svg width="24" height="24" viewBox="0 0 120 120"><path d="M22 22 H46 V74 H98 V98 H22 Z" fill="#F2EEE6"/><rect x="46" y="74" width="10" height="10" fill="#2ABFA8"/></svg>
+    <!-- Simplified nav mark matching client logo colors -->
+    <svg width="32" height="28" viewBox="0 0 120 100">
+      <polygon points="0,90 55,5 95,5 70,90" fill="#A0A0A0"/>
+      <polygon points="60,10 115,10 120,90 75,90" fill="#4BBFBF"/>
+      <polyline points="63,58 78,42 93,58" fill="none" stroke="white" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="68" y="58" width="20" height="16" fill="white" rx="1"/>
+      <rect x="74" y="64" width="8" height="10" fill="#4BBFBF"/>
+    </svg>
     <div style="display:flex;flex-direction:column">
-      <span class="logo-name">LAMAR</span>
-      <span class="logo-sub">Renovation &amp; Decoration</span>
+      <span class="logo-name" style="letter-spacing:0.1em">Lamar</span>
+      <span class="logo-sub">Stukadoor en Onderhoud</span>
     </div>
   </a>
   <div class="nav-r">
@@ -466,6 +473,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
         <div class="fg"><label class="fl">Your Name</label><input class="fi" type="text" placeholder="Jan de Vries"></div>
         <div class="fg"><label class="fl">Phone Number</label><input class="fi" type="tel" placeholder="+31 00 000 0000"></div>
       </div>
+      <div class="fg"><label class="fl">Email Address</label><input class="fi" type="email" placeholder="jan@example.com"></div>
       <div class="fg"><label class="fl">Service Needed</label><input class="fi" type="text" placeholder="Gypsum, Decoration, Painting..."></div>
       <div class="fg"><label class="fl">Tell Us About Your Project</label><textarea class="fi" placeholder="Describe your space and what you have in mind..."></textarea></div>
       <a href="#" class="btn-fill">Send Message</a>
@@ -475,10 +483,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:1.75rem 
 
 <footer>
   <a href="#hero" class="logo" style="gap:8px;text-decoration:none">
-    <svg width="20" height="20" viewBox="0 0 120 120"><path d="M22 22 H46 V74 H98 V98 H22 Z" fill="#F2EEE6"/><rect x="46" y="74" width="10" height="10" fill="#2ABFA8"/></svg>
+    <svg width="26" height="22" viewBox="0 0 120 100">
+      <polygon points="0,90 55,5 95,5 70,90" fill="#A0A0A0"/>
+      <polygon points="60,10 115,10 120,90 75,90" fill="#4BBFBF"/>
+      <polyline points="63,58 78,42 93,58" fill="none" stroke="white" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="68" y="58" width="20" height="16" fill="white" rx="1"/>
+      <rect x="74" y="64" width="8" height="10" fill="#4BBFBF"/>
+    </svg>
     <div style="display:flex;flex-direction:column">
-      <span style="font-family:'Archivo',sans-serif;font-weight:800;font-size:0.9rem;letter-spacing:0.24em;color:#F2EEE6">LAMAR</span>
-      <span style="font-family:'Archivo',sans-serif;font-weight:300;font-size:0.42rem;letter-spacing:0.32em;text-transform:uppercase;color:#6A6766">Renovation &amp; Decoration</span>
+      <span style="font-family:'Archivo',sans-serif;font-weight:800;font-size:0.9rem;letter-spacing:0.1em;color:#F2EEE6">Lamar</span>
+      <span style="font-family:'Archivo',sans-serif;font-weight:300;font-size:0.42rem;letter-spacing:0.22em;text-transform:uppercase;color:#6A6766">Stukadoor en Onderhoud</span>
     </div>
   </a>
   <ul class="flinks">
